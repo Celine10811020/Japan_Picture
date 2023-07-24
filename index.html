@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+  <title>日本旅遊照片</title>
+
+  <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <h1 align="center"> 2023.06.24~2023.07.04 日本旅遊照片 </h1>
+
+  <header>
+    <select class="date" id="date">
+      <option value="0">日期</option>
+      <option value="1">2023.06.24</option>
+      <option value="2">2023.06.25</option>
+      <option value="3">2023.06.26</option>
+      <option value="4">2023.06.27</option>
+      <option value="5">2023.06.28</option>
+      <option value="6">2023.06.29</option>
+      <option value="7">2023.06.30</option>
+      <option value="8">2023.07.01</option>
+      <option value="9">2023.07.02</option>
+      <option value="10">2023.07.03</option>
+      <option value="11">2023.07.04</option>
+    </select>
+
+    <button class="start"> 開始 </button>
+    <button class="next"> 下一張 </button>
+    <button class="previous"> 前一張 </button>
+  </header>
+
+  <main>
+    <img class="image" id="image"></img>
+    <h3 id="title" align="center"></h3>
+    <h5 id="descript"></h3>
+  </main>
+
+</body>
+
+<script src="main.js"></script>
+<script src="database.js"></script>
+<script>
+  $(document).bind("contextmenu copy selectstart", function() {
+    return false;
+  });
+</script>
+
+</html>

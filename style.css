@@ -1,0 +1,27 @@
+header{
+  margin: 2vw;
+}
+
+main{
+  margin: 2vw;
+}
+
+.image{
+  background-color: #FFF;
+	padding: 2px;
+	border: 1px solid #CCC;
+  width: 92vw;
+}
+
+.start{
+  margin-left: 2vw;
+}
+
+.previous, .next{
+  margin-left: 2vw;
+  float: right;
+}
+
+.title{
+  text-align: center;
+}
