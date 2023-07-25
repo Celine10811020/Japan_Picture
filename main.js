@@ -96,10 +96,10 @@ function showPicture()
       image.src = "./picture/20230702 (" + number + ").jpg";
       break;
     case "10":
-      image.src = "./picture/20230703 (" + number + ").jpg";
+      image.src = "./picture_2/20230703 (" + number + ").jpg";
       break;
     case "11":
-      image.src = "./picture/20230704 (" + number + ").jpg";
+      image.src = "./picture_2/20230704 (" + number + ").jpg";
       break;
     default:
       return;
