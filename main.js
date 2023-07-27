@@ -3,16 +3,22 @@ var number;
 $('.image').hide();
 $('.previous').hide();
 $('.next').hide();
+$('.zoomIn').hide();
+$('.zoomOut').hide();
 
 $('.start').on('click', doSearch);
 $('.previous').on('click', goPrevious);
 $('.next').on('click', goNext);
+$('.zoomIn').on('click', zoomIn);
+$('.zoomOut').on('click', zoomOut);
 
 function doSearch()
 {
   $('.image').show();
   $('.previous').show();
   $('.next').show();
+  $('.zoomIn').show();
+  $('.zoomOut').show();
 
   var date = document.getElementById("date");
 
@@ -197,4 +203,27 @@ function goNext()
   }
 
   showPicture();
+}
+
+function zoomIn()
+{
+  var image = document.getElementById("image");
+  var width = image.clientWidth;
+
+  if(width+50 < document.body.clientWidth)
+  {
+    image.style.width = (width + 50) + "px";
+    window.scrollBy(0, 50);
+  }
+}
+
+function zoomOut()
+{
+  var image = document.getElementById("image");
+  var width = image.clientWidth;
+
+  if(width-50 > document.body.clientWidth/3)
+  {
+    image.style.width = (width - 50) + "px";
+  }
 }
